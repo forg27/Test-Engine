@@ -1,5 +1,11 @@
 pub mod render;
 pub use crate::render::{Backend, Render};
-
-#[cfg(feature = "vulkan")]
-mod vulkan;
+pub enum Backend {
+    Vulkan,
+}
+pub trait Render {
+    fn render(
+        &mut self,
+        dimensions: &[u32; 2],
+    ) -> Result<()>;
+}

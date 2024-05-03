@@ -10,3 +10,4 @@ anyhow = "1.0.34"
 log = "0.4.11"
 winit = "0.24.0"
 simplelog = { version = "0.9.0", features = ["termcolor"] }
+obsidian_render = {path  = "../obsidian_render"}

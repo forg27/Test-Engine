@@ -10,6 +10,7 @@ anyhow = "1.0.34"
 log = "0.4.11"
 raw-window-handle = "0.3.3"
 
+# crates/obsidian_render/Cargo.toml
 [features]
 default = ["vulkan"]
-vulkan = []
+vulkan = [] 
