@@ -7,6 +7,7 @@ use winit::{
     event_loop::{ControlFlow, EventLoop},
     window::{Window, WindowBuilder},
 };
+use crate::logger::create_logger;
 pub struct AppConfig {
     pub width: u32,
     pub height: u32,
