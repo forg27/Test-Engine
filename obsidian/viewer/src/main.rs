@@ -2,7 +2,7 @@
 use anyhow::Result;
 use log::info;
 use obsidian::app::{run_application, AppConfig, Application, Run};
-
+use obsidian::render::*;
 pub struct Viewer;
 
 impl Run for Viewer {
