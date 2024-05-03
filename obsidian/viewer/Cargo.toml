@@ -9,3 +9,4 @@ edition = "2021"
 obsidian = {path = ".."}
 anyhow = "1.0.34"
 log = "0.4.11"
+obsidian_render = {path = "crates/obsidian_render"}
