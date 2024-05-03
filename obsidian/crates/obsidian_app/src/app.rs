@@ -39,7 +39,6 @@ impl Default for AppConfig {
     }
 }
 
-
 pub struct Application {
     pub renderer: Box<dyn Render>,
 }
@@ -48,7 +47,7 @@ impl Application {
     pub fn new(window: &Window) -> Result<Self> {
         let logical_size = window.inner_size();
         let window_dimensions = [logical_size.width, logical_size.height];
-        let renderer = Box::new(Render::create_backend(
+        let renderer = Box::new(<dyn Render>::create_backend(
             &Backend::Vulkan,
             window,
             &window_dimensions,

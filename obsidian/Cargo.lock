@@ -650,6 +650,7 @@ name = "obsidian"
 version = "0.1.0"
 dependencies = [
  "obsidian_app",
+ "obsidian_render",
 ]
 
 [[package]]
@@ -658,6 +659,7 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "log",
+ "obsidian_render",
  "simplelog",
  "winit",
 ]
@@ -665,6 +667,11 @@ dependencies = [
 [[package]]
 name = "obsidian_render"
 version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "log",
+ "raw-window-handle 0.3.4",
+]
 
 [[package]]
 name = "once_cell"
