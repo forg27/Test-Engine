@@ -7,7 +7,7 @@ use winit::{
     event_loop::{ControlFlow, EventLoop},
     window::{Window, WindowBuilder},
 };
-
+use crate::create_logger;
 pub struct AppConfig {
     pub width: u32,
     pub height: u32,
@@ -50,6 +50,7 @@ pub trait Run {
 }
 
 pub fn run_application(mut runner: impl Run + 'static, configuration: AppConfig) -> Result<()> {
+    create_logger(&configuration.logfile_name)?;
     let (event_loop, _window) = create_window(&configuration)?;
 
     let mut application = Application {};
