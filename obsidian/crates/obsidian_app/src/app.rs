@@ -7,7 +7,6 @@ use winit::{
     event_loop::{ControlFlow, EventLoop},
     window::{Window, WindowBuilder},
 };
-use crate::create_logger;
 pub struct AppConfig {
     pub width: u32,
     pub height: u32,
@@ -82,4 +81,5 @@ pub fn run_application(mut runner: impl Run + 'static, configuration: AppConfig)
             error!("Application Error: {}", error);
         }
     });
+    
 }
